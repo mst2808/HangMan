@@ -1,0 +1,8 @@
+<resources>
+
+    <declare-styleable name="KeyBoardButton">
+        <attr name="isPressed" format="boolean" />
+        <attr name="text" format="string"/>
+    </declare-styleable>
+
+</resources>
