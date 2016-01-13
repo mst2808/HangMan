@@ -57,10 +57,7 @@ public class PlayActivity extends Activity {
         init();
     }
 
-
-
     public void resetPLayGround() {
-
         init();
     }
 
@@ -74,7 +71,6 @@ public class PlayActivity extends Activity {
         playGround.getHangManView().setModel(model);
         keyBoard.setController(controller);
         keyBoard.init();
-
 
         mainLayout.invalidate();
 
@@ -117,5 +113,4 @@ public class PlayActivity extends Activity {
         model.decreaseMovesLeft();
         playGround.getHangManView().invalidate();
     }
-
 }
