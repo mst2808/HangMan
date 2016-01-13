@@ -86,7 +86,6 @@ public class PlayActivity extends Activity {
         mainLayout.postInvalidate();
 
         if(checkWon()) {
-            Toast.makeText(this, "Sie haben gewonnen!", Toast.LENGTH_SHORT).show();
             resetPLayGround();
         }
 
