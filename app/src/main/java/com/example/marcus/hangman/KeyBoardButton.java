@@ -6,12 +6,14 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 /**
  * Created by Marcus on 07.01.2016.
  */
-public class KeyBoardButton extends View{
+public class KeyBoardButton extends Button{
 
     public TypedArray a;
     private int xPos = -1;
@@ -22,46 +24,15 @@ public class KeyBoardButton extends View{
 
     private int buttonWidth, buttonHeight;
 
-    public KeyBoardButton(Context context, AttributeSet attrs) {
-        super(context, attrs);
+    public KeyBoardButton(Context context, AttributeSet attrs, int bla) {
+        super(context, attrs, bla);
         a = context.getTheme().obtainStyledAttributes(attrs, R.styleable.KeyBoardButton,0,0);
     }
 
-    private void init() {
-
-    }
 
     @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
-
-        Paint paint = new Paint();
-
-        if(xPos >= 0 && yPos >= 0) {
-            canvas.drawText(text, xPos, yPos, paint);
-            paint.setColor(Color.GREEN);
-            canvas.drawRect(xPos, yPos, buttonWidth, buttonHeight, paint);
-        }
-    }
-
-    public void setXPos(int xPos) {
-        this.xPos = xPos;
-    }
-
-    public void setYPos(int yPos) {
-        this.yPos = yPos;
-    }
-
-    public void setButtonHeight(int buttonHeight) {
-        this.buttonHeight = buttonHeight;
-    }
-
-    public void setButtonWidth(int buttonWidth) {
-        this.buttonWidth = buttonWidth;
-    }
-
-    public void setText(String text) {
-        this.text = text;
+    public String toString() {
+        return "X:" + xPos + "\tY:" + yPos + "\tbw:" + buttonWidth + "\tbh:" + buttonHeight;
     }
 
 }
