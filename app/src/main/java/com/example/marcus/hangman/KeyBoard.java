@@ -44,7 +44,7 @@ public class KeyBoard extends GridLayout{
 
     public void init() {
 
-        this.setBackgroundColor(Color.GREEN);
+        this.setBackgroundColor(Color.TRANSPARENT);
         this.removeAllViews();
 
         this.setRowCount(4);

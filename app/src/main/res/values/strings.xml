@@ -6,4 +6,6 @@
 
     <string name="title_activity_play">PlayActivity</string>
     <string name="play_button">Play</string>
+
+    <string name="title_activity_summery">SummeryActivity</string>
 </resources>

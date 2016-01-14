@@ -48,24 +48,28 @@ public class PlayGround extends LinearLayout{
 
         hangManView = (HangManView) findViewById(R.id.hangManView);
         hangManView.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, 20, 12f));
-        hangManView.setBackgroundColor(Color.YELLOW);
+        hangManView.setBackgroundColor(Color.TRANSPARENT);
 
         kategorieTV = (TextView) findViewById(R.id.kategorie);
         kategorieTV.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, 10, 2f));
-        kategorieTV.setBackgroundColor(Color.BLUE);
+        kategorieTV.setBackgroundColor(Color.TRANSPARENT);
 
         visibleWordTV = (TextView) findViewById(R.id.visiableWord);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, 10, 3f);
 //        params.gravity = Gravity.BOTTOM;
         visibleWordTV.setLayoutParams(params);
-        visibleWordTV.setBackgroundColor(Color.RED);
+        visibleWordTV.setBackgroundColor(Color.TRANSPARENT);
 
-        this.setBackgroundColor(Color.BLUE);
+        this.setBackgroundColor(Color.TRANSPARENT);
         this.postInvalidate();
 
     }
 
     public HangManView getHangManView() {
         return hangManView;
+    }
+
+    public TextView getKategorieTV() {
+        return kategorieTV;
     }
 }
