@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:id="@+id/informationTV"
-        android:textSize="40dp"
+        android:textSize="20sp"
         android:gravity="center"
         android:layout_weight="1"/>
 
@@ -25,41 +25,45 @@
         android:layout_height="1dp"
         android:layout_weight="2">
 
-        <TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/oldScoreTV"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:gravity="center"
                 android:layout_weight="1"/>
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/oldDateTV"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:gravity="center"
                 android:layout_weight="3"/>
 
         </TableRow>
 
-        <TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/newScoreTV"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:gravity="center"
                 android:layout_weight="1"/>
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/newDateTV"
-                android:textSize="30dp"
+                android:textSize="30sp"
                 android:gravity="center"
                 android:layout_weight="3"/>
 

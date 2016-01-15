@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
@@ -56,28 +57,35 @@ public class SummeryActivity extends AppCompatActivity {
 
         pref = getSharedPreferences("GAME", 0);
 
+        informationTV.setText("Leider kein neuer Highscore!");
+
         if(pref.getInt("HIGHSCORE", 0) < intent.getIntExtra("score",0)) {
             informationTV.setText("Sie haben einen neuen Highscore aufgestellt!");
             addHighScoreToFile(new Score(intent.getIntExtra("score", 0), intent.getLongExtra("date", 0)));
 
         }
-        
+
         showNewScore();
 
     }
 
     private void showNewScore() {
-        oldScoreTV.setText(pref.getInt("HIGHSCORE", 0));
-        oldDateTV.setText(sdf.format(new Date(pref.getLong("HIGHSCOREDATE", 0))));
-        newScoreTV.setText(intent.getIntExtra("score", 0));
-        newDateTV.setText(sdf.format(new Date(intent.getLongExtra("date", 0))));
+        oldScoreTV.setText("" + pref.getInt("HIGHSCORE", 0));
+        oldDateTV.setText("" + sdf.format(new Date(pref.getLong("HIGHSCOREDATE", 0))));
+        newScoreTV.setText("" + intent.getIntExtra("score", 0));
+        newDateTV.setText("" + sdf.format(new Date(intent.getLongExtra("date", 0))));
+
+        Log.d("MYLOG ", "" + pref.getInt("HIGHSCORE", 0));
+        Log.d("MYLOG ", "" + pref.getLong("HIGHSCOREDATE", 0));
+
     }
 
     public void addHighScoreToFile(Score score) {
 
         SharedPreferences pref = getSharedPreferences("GAME", 0);
         SharedPreferences.Editor editor = pref.edit();
-        editor.putInt("HIGHSCORE", score.getScore());
+//        editor.putInt("HIGHSCORE", score.getScore());
+        editor.putInt("HIGHSCORE", 0);
         editor.putLong("HIGHSCOREDATE", score.getDate());
         editor.commit();
 
